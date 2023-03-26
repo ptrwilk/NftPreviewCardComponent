@@ -1,0 +1,131 @@
+@import url('../../colors.css');
+
+.container{
+    width : 350px;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background-color: var(--very-dark-blue-card-bg);
+    box-shadow: 0px 23px 0px 15px var(--very-dark-blue-main-bg),
+                0px 25px 0px 45px hsla(226, 71%, 22%, 0.055);
+}
+
+.container .img-overlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.container .img-overlay img{
+    width: 100%;
+}
+
+.container .img-overlay:active::after{
+    content: "";
+    position: absolute;
+    top : 0;
+    bottom: 0;
+    left : 0;
+    right : 0;
+    background-color: var(--cyan-opacity);
+}
+
+.container .img-overlay:active::before{
+    content: "";
+    position: absolute;
+    height: 3rem;
+    width: 3rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: var(--cyan-opacity);
+    background-image: url('../../assets/icon-view.svg');
+    z-index: 1;
+}
+
+.container .title{
+    margin-top: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--white);
+}
+
+.container .title:active{
+    color: var(--cyan);
+}
+
+.container .text{
+    margin-top: 1.5rem;
+    font-weight: 300;
+    color: var(--soft-blue);
+}
+
+.container .summary{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.container .summary p{
+    display: flex;
+    align-items: center;
+}
+
+.container .summary .amount{
+    color: var(--cyan);
+}
+
+.container .summary .remaining-time{
+    color: var(--soft-blue);
+}
+
+.container .summary p:before{
+    content: "";
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.container .summary .amount::before{
+    margin-right: 0.2rem;
+    background-image: url('../../assets/icon-ethereum.svg');
+}
+
+.container .summary .remaining-time::before{
+    margin-right: 0.5rem;
+    background-image: url('../../assets/icon-clock.svg');
+}
+
+.container hr{
+    margin-top: 1.5rem;
+    border-color: var(--very-dark-blue-line);
+}
+
+.container .avatar-container{
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.container .avatar{
+    margin-right: 1rem;
+    border :1px solid var(--white)
+}
+
+.container .creator{
+    color: var(--soft-blue);
+    font-size: 16px;
+}
+
+.container .creator .name{
+    cursor: pointer;
+    color: var(--white);
+}
+
+.container .creator .name:active{
+    color: var(--cyan);
+}
